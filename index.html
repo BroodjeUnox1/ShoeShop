@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<title></title>
+</head>
+<body>
+	<div class="body">
+		<div class="header">
+			<header class="p">Ligma</header>
+			<div class="login"">
+				menu
+			</div>
+				<div class="loginreg" style="display: none;">
+					<form method="POST" action="login.php" class="form">
+						<input type="text" name="username" placeholder="Enter Username" required="">
+						<input type="password" name="password" placeholder="Enter Password" required="">
+						<button type="submit" name="submit" class="lgn">Login</button>
+						<button type="button" class="signup">Register now</button>
+					</form>
+				</div>
+				<div class="regritratie">
+					<form method="POST" action="login.php" class="form">
+						<input type="text" name="username" placeholder="Enter Username" required="">
+						<input type="email" name="email" placeholder="Enter Email" required="">
+						<input type="password" name="password" placeholder="Enter Password" required="">
+						<input type="password" name="cpassword" placeholder="Comfirm Password" required="">
+						<button type="submit" name="signup" class="signup2">Sign Up</button>
+					</form>
+				</div>	
+		</div>
+	</div>
+		<div class="schoen">
+			<img src="./img/download.jpg" style="width: 300px; height: 300px;" class="img">
+			<div class="schoen1">
+				<div class="showdetails1">
+					<h1 class="pijl">&darr;</h1>
+				</div>
+				<div class="info1">
+					<div class="ml1 info">
+						<h1>L</h1>
+					</div>
+					<div class="mm1 info">
+						<h1>M</h1>
+					</div>
+					<div class="ms1 info">
+						<h1>S</h1>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="skoen1">
+			<img src="./img/download1.jpg" style="width: 300px; height: 300px;" class="img2">
+			<div class="schoen2">
+				<div class="showdetails2">
+					<h1 class="pijl2">&darr;</h1>
+				</div>
+				<div class="info2">
+					<div class="ml2 inf">
+						<h1>L</h1>
+					</div>
+					<div class="mm2 inf">
+						<h1>M</h1>
+					</div>
+					<div class="ms2 inf">
+						<h1>S</h1>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+
+
+<script type="text/javascript">
+	$(document).ready(() => {
+		$('.regritratie').hide();
+		$('.info, .info1, .inf, .info2').hide();
+		$('.mm1, .ms1, .ml1, .ml2, .ms2, .mm2').css('background-color', 'purple');
+
+
+		$('.login').on('click',() => {
+    		$('.loginreg').toggle();
+    		$('.regritratie').hide();
+  		})
+
+		$('.signup').on('click',() => {
+    		$('.regritratie').toggle();
+    		$('.schoen').css('z-index', '-100px');
+  		})
+
+		$('.pijl').on('click',() => {
+    		$('.info, .info1').toggle();
+    		$('.mm1, .ms1, .ml1, .ml2, .ms2, .mm2').css('background-color', 'purple');
+  		})
+
+  		$('.ml1').on('click',() => {
+    		$('.ml1').css('background-color', 'red');
+    		$('.mm1, .ms1').css('background-color', 'purple');
+  		})
+
+  		$('.mm1').on('click',() => {
+    		$('.mm1').css('background-color', 'red');
+    		$('.ml1, .ms1').css('background-color', 'purple');
+  		})
+
+  		$('.ms1').on('click',() => {
+    		$('.ms1').css('background-color', 'red');
+    		$('.mm1, .ml1').css('background-color', 'purple');
+  		})
+
+  		$('.pijl2').on('click',() => {
+    		$('.inf, .info2').toggle();
+    		$('.mm1, .ms1, .ml1, .ml2, .ms2, .mm2').css('background-color', 'purple');
+  		})
+
+  		$('.ml2').on('click',() => {
+    		$('.ml2').css('background-color', 'red');
+    		$('.mm2, .ms2').css('background-color', 'purple');
+  		})
+
+  		$('.mm2').on('click',() => {
+    		$('.mm2').css('background-color', 'red');
+    		$('.ml2, .ms2').css('background-color', 'purple');
+  		})
+
+  		$('.ms2').on('click',() => {
+    		$('.ms2').css('background-color', 'red');
+    		$('.mm2, .ml2').css('background-color', 'purple');
+  		})
+
+
+  	});
+</script>
+</body>
+</html>
